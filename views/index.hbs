@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twinker - Home</title>
+</head>
+<body>
+  <form action="/posts" method="post">
+    <input type="text" name="owner" id="">
+    <input type="text" name="content" id="">
+    <input type="submit" value="enviar">
+  </form>
+
+  {{#each posts}}
+  <h1>Owner {{owner}}</h1>
+  <h2>content {{content}}</h2>
+  <h2>Lamps {{lamps}}</h2>
+  <h2>comments {{comments}}</h2>
+  <h4>created {{created_at}}</h4>
+  {{else}}
+  Nenhuma postagem
+  {{/each}}
+</body>
+</html>
